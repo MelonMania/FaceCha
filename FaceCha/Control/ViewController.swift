@@ -15,59 +15,84 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        uploadedImage.image = UIImage(named: "wj.jpeg")
     }
     
     @IBAction func pressSearch(_ sender: UIButton) {
-//        let client_id = "Rc6NtwiN6gAgbiBcw7Lg"
-//        let client_secret = "Fx2iP3XydR"
-//        let url = URL(string: "https://openapi.naver.com/v1/vision/celebrity")
-//
-//        var request = URLRequest(url: url!)
-//        //request.httpBody = imageWJ
-//        request.httpMethod = "POST"
-//        request.addValue("multipart/form-data; boundary=\(boundary)}", forHTTPHeaderField: "Content-Type")
-//        request.addValue(client_id, forHTTPHeaderField: "X-Naver-Client-Id")
-//        request.addValue(client_secret, forHTTPHeaderField: "X-Naver-Client-Secret")
-        let apiUrl: URL = URL(string: UserDefaults.standard.getApiURL() + "/api/test")!
-
-        let headers = [
-            "client_id" : "Rc6NtwiN6gAgbiBcw7Lg",
-            "client_secret" : "Fx2iP3XydR",
-            "Content-Type" : "multipart/form-data; boundary=\(boundary)" //application/json, multipart/form-data
-        ]
-
-        let escapeContents = self.contents.text.replacingOccurrences(of: "\n", with: "\\n")
-
-        let params: Parameters = [
-            "jsonData": "{\"contentData\": {\"text\": \"\(escapeContents)\", \"mentions\": [\(mentionsUser)]},\"feedType\": \"NORMAL\"}"
-        ]
-
-        let imageData = UIImageJPEGRepresentation(self.pickImageV.image!, 1.0)
-
-        AF.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(imageData!, withName: "file", fileName: "wj.jpeg", mimeType: "image/jpeg")
-            for (key, value) in params {
-                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
-            }
-        }, usingThreshold: UInt64.init(), to: apiUrl, method: .post, headers: headers) { result in
-            switch result {
-            case .success(let upload, _, _):
-                upload.responseJSON(completionHandler: { response in
-                    let json = JSON(response.result.value!)
-                    //이후 json 데이터를 처리
-                })
-            case .failure(let error):
-                print(error)
-                Toast.long(message: "Network communication is no working.", isWarning: true)
-            }//end switch
+        postData()
+        
+    }
+    
+    func postData() {
+        let image = UIImage(imageLiteralResourceName: "wj.jpeg")
+        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
+            print("oops")
+            return
         }
+        let url = URL(string: "https://openapi.naver.com/v1/vision/celebrity")
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        request.timeoutInterval = 30.0
+        let uuid = UUID().uuidString
+        let CRLF = "\r\n"
+        let fileName = uuid + ".jpg"
+        let formName = "image"
+        let type = "image/jpeg"     // file type
+        let boundary = String(format: "----iOSURLSessionBoundary.%08x%08x", arc4random(), arc4random())
+        var body = Data()
+        // file data //
+        body.append(("--\(boundary)" + CRLF).data(using: .utf8)!)
+        body.append("Content-Disposition: form-data; name=\"\(formName)\"; filename=\"\(fileName)\"\r\n".data(using: .utf8)!)
+        body.append(("Content-Type: \(type)" + CRLF + CRLF).data(using: .utf8)!)
+        body.append(imageData as Data)
+        body.append(CRLF.data(using: .utf8)!)
+        // footer //
+        body.append(("--\(boundary)--" + CRLF).data(using: .utf8)!)
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+        request.addValue("Rc6NtwiN6gAgbiBcw7Lg", forHTTPHeaderField: "X-Naver-Client-Id")
+        request.addValue("Fx2iP3XydR", forHTTPHeaderField: "X-Naver-Client-Secret")
+        
+        request.httpBody = body
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            if error != nil {
+                print(error!)
+            }
+            if let safedata = data{
+                DispatchQueue.main.async {
+                    if let faceData = self.parseJSON(data: safedata){
+                        print(faceData.celebrityName)
+                    }
+                }
+            }
+        }
+        task.resume()
     }
     
     
-    
-    
+    func parseJSON(data : Data) -> ImageModel? {
+        let decoder = JSONDecoder()
+        
+        do{
+            let decodedData = try decoder.decode(ImageData.self, from: data)
+            
+            let name = decodedData.faces[0].celebrity.value
+            
+            let image = ImageModel(celebrityName: name)
+            return image
+        }
+        catch{
+            print(error)
+            return nil
+        }
+    }
 }
 
-
+extension NSMutableData {
+    
+    func appendString(_ string: String) {
+        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: true)
+        append(data!)
+    }
+}
 

@@ -13,7 +13,6 @@
 		17397D9C25F8B3270091EC45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17397D9A25F8B3270091EC45 /* Main.storyboard */; };
 		17397D9E25F8B3280091EC45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17397D9D25F8B3280091EC45 /* Assets.xcassets */; };
 		17397DA125F8B3280091EC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17397D9F25F8B3280091EC45 /* LaunchScreen.storyboard */; };
-		17397DB325F8BB600091EC45 /* wj.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 17397DB225F8BB600091EC45 /* wj.jpeg */; };
 		17397DB725F8BCE90091EC45 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397DB625F8BCE90091EC45 /* ImageData.swift */; };
 		17397DBA25F8BD270091EC45 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397DB925F8BD270091EC45 /* ImageModel.swift */; };
 		D49061EA8B0C4CBCD0B09424 /* Pods_FaceCha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447219171E339941DD643B67 /* Pods_FaceCha.framework */; };
@@ -28,7 +27,6 @@
 		17397D9D25F8B3280091EC45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17397DA025F8B3280091EC45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17397DA225F8B3280091EC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17397DB225F8BB600091EC45 /* wj.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = wj.jpeg; path = ../../../Downloads/wj.jpeg; sourceTree = "<group>"; };
 		17397DB625F8BCE90091EC45 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		17397DB925F8BD270091EC45 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		447219171E339941DD643B67 /* Pods_FaceCha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceCha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,7 +73,6 @@
 				17397D9425F8B3270091EC45 /* AppDelegate.swift */,
 				17397D9625F8B3270091EC45 /* SceneDelegate.swift */,
 				17397D9D25F8B3280091EC45 /* Assets.xcassets */,
-				17397DB225F8BB600091EC45 /* wj.jpeg */,
 				17397D9F25F8B3280091EC45 /* LaunchScreen.storyboard */,
 				17397DA225F8B3280091EC45 /* Info.plist */,
 			);
@@ -183,7 +180,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17397DB325F8BB600091EC45 /* wj.jpeg in Resources */,
 				17397DA125F8B3280091EC45 /* LaunchScreen.storyboard in Resources */,
 				17397D9E25F8B3280091EC45 /* Assets.xcassets in Resources */,
 				17397D9C25F8B3270091EC45 /* Main.storyboard in Resources */,
