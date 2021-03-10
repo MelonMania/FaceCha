@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17312CB125F972CA00C6F3FC /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17312CB025F972CA00C6F3FC /* ImageManager.swift */; };
 		17397D9525F8B3270091EC45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397D9425F8B3270091EC45 /* AppDelegate.swift */; };
 		17397D9725F8B3270091EC45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397D9625F8B3270091EC45 /* SceneDelegate.swift */; };
 		17397D9925F8B3270091EC45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397D9825F8B3270091EC45 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17312CB025F972CA00C6F3FC /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		17397D9125F8B3270091EC45 /* FaceCha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceCha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17397D9425F8B3270091EC45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17397D9625F8B3270091EC45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				17397DB625F8BCE90091EC45 /* ImageData.swift */,
 				17397DB925F8BD270091EC45 /* ImageModel.swift */,
+				17312CB025F972CA00C6F3FC /* ImageManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				17397D9925F8B3270091EC45 /* ViewController.swift in Sources */,
 				17397DBA25F8BD270091EC45 /* ImageModel.swift in Sources */,
 				17397D9525F8B3270091EC45 /* AppDelegate.swift in Sources */,
+				17312CB125F972CA00C6F3FC /* ImageManager.swift in Sources */,
 				17397D9725F8B3270091EC45 /* SceneDelegate.swift in Sources */,
 				17397DB725F8BCE90091EC45 /* ImageData.swift in Sources */,
 			);
