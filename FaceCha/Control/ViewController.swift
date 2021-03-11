@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
         searchButton.layer.cornerRadius = 10
         selectButton.layer.cornerRadius = 20
-        uploadedImage.image = UIImage(named: "wj.jpeg")
+        
     }
     
     @IBAction func pressSearch(_ sender: UIButton) {
