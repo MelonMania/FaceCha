@@ -15,16 +15,18 @@ protocol ImageManagerDelegate {
 struct ImageManager{
     var delegate : ImageManagerDelegate?
     
-    let image = UIImage(imageLiteralResourceName: "wj.jpeg")
+    
     let url = URL(string: "https://openapi.naver.com/v1/vision/celebrity")
     
-    func postData() {
-        
+    func postData(_ selectedImage : UIImage) {
+  
+        //let image = UIImage(imageLiteralResourceName: "wj.jpeg")
+        let image = selectedImage
         guard let imageData = image.jpegData(compressionQuality: 1.0) else {
             print("oops")
             return
         }
-        
+
         var request = URLRequest(url: url!)
         
         request.httpMethod = "POST"

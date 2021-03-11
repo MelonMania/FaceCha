@@ -16,6 +16,10 @@
 		17397DA125F8B3280091EC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17397D9F25F8B3280091EC45 /* LaunchScreen.storyboard */; };
 		17397DB725F8BCE90091EC45 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397DB625F8BCE90091EC45 /* ImageData.swift */; };
 		17397DBA25F8BD270091EC45 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397DB925F8BD270091EC45 /* ImageModel.swift */; };
+		1755F70525F9E83400202508 /* hyun.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1755F70425F9E83400202508 /* hyun.jpeg */; };
+		1755F70825F9E99400202508 /* woo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1755F70725F9E99400202508 /* woo.jpeg */; };
+		1755F70B25F9EAA000202508 /* rkwjd.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1755F70A25F9EAA000202508 /* rkwjd.jpeg */; };
+		1755F70E25FA04F500202508 /* GR.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1755F70D25FA04F500202508 /* GR.jpeg */; };
 		D49061EA8B0C4CBCD0B09424 /* Pods_FaceCha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447219171E339941DD643B67 /* Pods_FaceCha.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +35,10 @@
 		17397DA225F8B3280091EC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17397DB625F8BCE90091EC45 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		17397DB925F8BD270091EC45 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		1755F70425F9E83400202508 /* hyun.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hyun.jpeg; path = ../../../Downloads/hyun.jpeg; sourceTree = "<group>"; };
+		1755F70725F9E99400202508 /* woo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = woo.jpeg; path = ../../../Downloads/woo.jpeg; sourceTree = "<group>"; };
+		1755F70A25F9EAA000202508 /* rkwjd.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rkwjd.jpeg; path = ../../../Downloads/rkwjd.jpeg; sourceTree = "<group>"; };
+		1755F70D25FA04F500202508 /* GR.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = GR.jpeg; path = ../../../Downloads/GR.jpeg; sourceTree = "<group>"; };
 		447219171E339941DD643B67 /* Pods_FaceCha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceCha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD78C9764C7C4240C26DD29 /* Pods-FaceCha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceCha.release.xcconfig"; path = "Target Support Files/Pods-FaceCha/Pods-FaceCha.release.xcconfig"; sourceTree = "<group>"; };
 		D5CBB29E1E03F22928A40368 /* Pods-FaceCha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceCha.debug.xcconfig"; path = "Target Support Files/Pods-FaceCha/Pods-FaceCha.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +85,10 @@
 				17397D9D25F8B3280091EC45 /* Assets.xcassets */,
 				17397D9F25F8B3280091EC45 /* LaunchScreen.storyboard */,
 				17397DA225F8B3280091EC45 /* Info.plist */,
+				1755F70425F9E83400202508 /* hyun.jpeg */,
+				1755F70725F9E99400202508 /* woo.jpeg */,
+				1755F70A25F9EAA000202508 /* rkwjd.jpeg */,
+				1755F70D25FA04F500202508 /* GR.jpeg */,
 			);
 			path = FaceCha;
 			sourceTree = "<group>";
@@ -186,6 +198,10 @@
 				17397DA125F8B3280091EC45 /* LaunchScreen.storyboard in Resources */,
 				17397D9E25F8B3280091EC45 /* Assets.xcassets in Resources */,
 				17397D9C25F8B3270091EC45 /* Main.storyboard in Resources */,
+				1755F70B25F9EAA000202508 /* rkwjd.jpeg in Resources */,
+				1755F70E25FA04F500202508 /* GR.jpeg in Resources */,
+				1755F70525F9E83400202508 /* hyun.jpeg in Resources */,
+				1755F70825F9E99400202508 /* woo.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U53S827ZJ;
 				INFOPLIST_FILE = FaceCha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,6 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4U53S827ZJ;
 				INFOPLIST_FILE = FaceCha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
