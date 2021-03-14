@@ -87,6 +87,7 @@ extension ViewController : ImageManagerDelegate {
     
     func didFailWithError(_ error: Error) {
         print(error)
+        celebrityName.text = "Please select another Picture"
     }
 }
 
