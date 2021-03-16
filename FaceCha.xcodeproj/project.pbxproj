@@ -16,6 +16,9 @@
 		17397DA125F8B3280091EC45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17397D9F25F8B3280091EC45 /* LaunchScreen.storyboard */; };
 		17397DB725F8BCE90091EC45 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397DB625F8BCE90091EC45 /* ImageData.swift */; };
 		17397DBA25F8BD270091EC45 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17397DB925F8BD270091EC45 /* ImageModel.swift */; };
+		17AF8FDA25FE27D400D8D2A9 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF8FD925FE27D400D8D2A9 /* SearchManager.swift */; };
+		17AF8FDD25FE313B00D8D2A9 /* SearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF8FDC25FE313B00D8D2A9 /* SearchData.swift */; };
+		17AF8FE025FE32D500D8D2A9 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AF8FDF25FE32D500D8D2A9 /* SearchModel.swift */; };
 		D49061EA8B0C4CBCD0B09424 /* Pods_FaceCha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447219171E339941DD643B67 /* Pods_FaceCha.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		17397DA225F8B3280091EC45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17397DB625F8BCE90091EC45 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		17397DB925F8BD270091EC45 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		17AF8FD925FE27D400D8D2A9 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
+		17AF8FDC25FE313B00D8D2A9 /* SearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchData.swift; sourceTree = "<group>"; };
+		17AF8FDF25FE32D500D8D2A9 /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		447219171E339941DD643B67 /* Pods_FaceCha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceCha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBD78C9764C7C4240C26DD29 /* Pods-FaceCha.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceCha.release.xcconfig"; path = "Target Support Files/Pods-FaceCha/Pods-FaceCha.release.xcconfig"; sourceTree = "<group>"; };
 		D5CBB29E1E03F22928A40368 /* Pods-FaceCha.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceCha.debug.xcconfig"; path = "Target Support Files/Pods-FaceCha/Pods-FaceCha.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				17397DB625F8BCE90091EC45 /* ImageData.swift */,
 				17397DB925F8BD270091EC45 /* ImageModel.swift */,
 				17312CB025F972CA00C6F3FC /* ImageManager.swift */,
+				17AF8FD925FE27D400D8D2A9 /* SearchManager.swift */,
+				17AF8FDC25FE313B00D8D2A9 /* SearchData.swift */,
+				17AF8FDF25FE32D500D8D2A9 /* SearchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,7 +248,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				17397D9925F8B3270091EC45 /* ViewController.swift in Sources */,
+				17AF8FDA25FE27D400D8D2A9 /* SearchManager.swift in Sources */,
 				17397DBA25F8BD270091EC45 /* ImageModel.swift in Sources */,
+				17AF8FE025FE32D500D8D2A9 /* SearchModel.swift in Sources */,
+				17AF8FDD25FE313B00D8D2A9 /* SearchData.swift in Sources */,
 				17397D9525F8B3270091EC45 /* AppDelegate.swift in Sources */,
 				17312CB125F972CA00C6F3FC /* ImageManager.swift in Sources */,
 				17397D9725F8B3270091EC45 /* SceneDelegate.swift in Sources */,
