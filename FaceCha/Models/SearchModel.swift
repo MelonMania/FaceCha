@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct SearchModel {
+    let imageLink : String
+}

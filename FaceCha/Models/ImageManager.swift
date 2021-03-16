@@ -20,7 +20,6 @@ struct ImageManager{
     
     func postData(_ selectedImage : UIImage) {
   
-        //let image = UIImage(imageLiteralResourceName: "wj.jpeg")
         let image = selectedImage
         guard let imageData = image.jpegData(compressionQuality: 1.0) else {
             print("oops")
