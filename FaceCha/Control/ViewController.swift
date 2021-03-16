@@ -15,11 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectButton: UIButton!
     
     var imageManager = ImageManager()
+    var searchManager = SearchManager()
+    
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageManager.delegate = self
+        searchManager.delegate = self
         imagePicker.delegate = self
         
         searchButton.layer.cornerRadius = 10
@@ -82,7 +85,9 @@ extension ViewController : UIImagePickerControllerDelegate, UINavigationControll
 extension ViewController : ImageManagerDelegate {
     
     func didUpdateResembleCeleb(_ data: ImageModel ) {
-        celebrityName.text = data.celebrityName
+        let name = data.celebrityName
+        celebrityName.text = name
+        searchManager.fetchURL(name)
     }
     
     func didFailWithError(_ error: Error) {
@@ -91,5 +96,24 @@ extension ViewController : ImageManagerDelegate {
     }
 }
 
+//MARK: - SearchManagerDelegate
 
+extension ViewController : SearchManagerDelegate {
+    func loadCelebPicture(_ searchData : SearchModel) {
+        print(searchData.imageLink)
+        let url = URL(string: searchData.imageLink)
+        do{
+            let celebImageData  = try Data(contentsOf: url!)
+            print("clear")
+            uploadedImage.image = UIImage(data: celebImageData)
+        }
+        catch{
+            print("Fail to load ImageData from Naver")
+        }
+    }
+    
+    func printLoadError(_ error : Error) {
+        print(error)
+    }
+}
 
