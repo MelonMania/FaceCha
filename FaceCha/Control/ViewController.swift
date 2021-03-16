@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var celebrityName: UILabel!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var selectButton: UIButton!
+    @IBOutlet weak var errorMessageLabel: UILabel!
     
     var imageManager = ImageManager()
     var searchManager = SearchManager()
@@ -104,16 +105,17 @@ extension ViewController : SearchManagerDelegate {
         let url = URL(string: searchData.imageLink)
         do{
             let celebImageData  = try Data(contentsOf: url!)
-            print("clear")
+            
             uploadedImage.image = UIImage(data: celebImageData)
         }
         catch{
-            print("Fail to load ImageData from Naver")
+            errorMessageLabel.text = "Fail to Load Celebrity Image"
         }
     }
     
     func printLoadError(_ error : Error) {
         print(error)
+        errorMessageLabel.text = "Fail to load data from API"
     }
 }
 

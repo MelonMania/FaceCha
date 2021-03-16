@@ -62,7 +62,7 @@ struct SearchManager {
             return link
         }
         catch{
-            print(error)
+            delegate?.printLoadError(error)
             return nil
         }
     }
